@@ -33,7 +33,7 @@ public readonly struct RequestHeaderValue
 
     public override string ToString()
     {
-        string quality = Quality is not null ?
+        string quality = HasQuality ?
             $";q={string.Format(System.Globalization.CultureInfo.InvariantCulture, "{0:F1}", Quality)}":
             "";
 
