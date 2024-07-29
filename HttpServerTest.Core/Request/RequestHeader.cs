@@ -28,7 +28,7 @@ public readonly struct RequestHeader
         List<string> values = [];
 
         foreach (var value in Values
-            .OrderBy(headerValue => headerValue.Quality is null)
+            .OrderBy(headerValue => headerValue.Quality is not null)
             .ThenByDescending(headerValue => headerValue.Quality))
         {
             values.Add(value.ToString());
