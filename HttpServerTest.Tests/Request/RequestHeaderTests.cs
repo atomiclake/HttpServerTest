@@ -56,7 +56,7 @@ public class RequestHeaderTests
     }
 
     [Fact]
-    public void RequestHeader_MultipleValuesWithQuality_ProducesCorrectString_Case1()
+    public void RequestHeader_MultipleValuesWithQuality_ProducesCorrectString()
     {
         // Arrange
         var actualData = DefaultTestData[2].ToString();
