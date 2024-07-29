@@ -34,6 +34,6 @@ public readonly struct RequestHeader
             values.Add(value.ToString());
         }
 
-        return string.Join(",", values);
+        return $"{Name}: {string.Join(",", values)}";
     }
 }
