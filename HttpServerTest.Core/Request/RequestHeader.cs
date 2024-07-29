@@ -8,6 +8,11 @@ public readonly struct RequestHeader
 
     public RequestHeader(string name, IEnumerable<RequestHeaderValue> values)
     {
+        if (string.IsNullOrWhiteSpace(name))
+        {
+            throw new ArgumentException("Header value must not be empty or blank", nameof(name));
+        }
+
         Name = name;
         Values = values;
     }
