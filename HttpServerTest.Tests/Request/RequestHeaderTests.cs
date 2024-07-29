@@ -4,15 +4,11 @@ namespace HttpServerTest.Tests.Request;
 
 public class RequestHeaderTests
 {
-    private readonly List<RequestHeader> DefaultTestData;
-
-    public RequestHeaderTests()
-    {
-        DefaultTestData =
+    private static readonly List<RequestHeader> DefaultTestData =
         [
             new("Host", [new("developer.mozilla.org")]),
-            new("User-Agent", [new("Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0")]),
-            new("Accept", [new("text/html"), new("application/xhtml+xml"), new("application/xml", 0.9f), new("*/*", 0.8f)])
+        new("Accept-Encoding", [new("gzip"), new("deflate"), new("br")]),
+        new("Accept", [new("text/html"), new("application/xhtml+xml"), new("application/xml", 0.9f), new("*/*", 0.8f)]),
         ];
     }
 
