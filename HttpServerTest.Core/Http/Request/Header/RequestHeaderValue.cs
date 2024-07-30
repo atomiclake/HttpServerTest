@@ -1,4 +1,4 @@
-﻿namespace HttpServerTest.Core.Request;
+﻿namespace HttpServerTest.Core.Http.Request.Header;
 
 public readonly struct RequestHeaderValue
 {
@@ -28,13 +28,13 @@ public readonly struct RequestHeaderValue
     public RequestHeaderValue(string value)
         : this(value, default)
     {
-        
+
     }
 
     public override string ToString()
     {
         string quality = HasQuality ?
-            $";q={string.Format(System.Globalization.CultureInfo.InvariantCulture, "{0:F1}", Quality)}":
+            $";q={string.Format(System.Globalization.CultureInfo.InvariantCulture, "{0:F1}", Quality)}" :
             "";
 
         return $"{Value}{quality}";

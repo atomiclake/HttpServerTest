@@ -1,6 +1,6 @@
-﻿using HttpServerTest.Core.Request;
+﻿using HttpServerTest.Core.Http.Request.Header;
 
-namespace HttpServerTest.Tests.Request;
+namespace HttpServerTest.Tests.Http.Request.Header;
 
 public class RequestHeaderValueTests
 {

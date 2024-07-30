@@ -1,4 +1,4 @@
-﻿namespace HttpServerTest.Core.Request;
+﻿namespace HttpServerTest.Core.Http.Request.Header;
 
 public readonly struct RequestHeader
 {
@@ -20,7 +20,7 @@ public readonly struct RequestHeader
     public RequestHeader(string name)
         : this(name, [])
     {
-        
+
     }
 
     public override readonly string ToString()
