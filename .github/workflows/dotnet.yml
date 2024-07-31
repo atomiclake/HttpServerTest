@@ -5,6 +5,9 @@ name: .NET CI/CD
 
 on:
   push:
+    paths-ignore:
+    - README.md
+    - LICENSE.txt
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
